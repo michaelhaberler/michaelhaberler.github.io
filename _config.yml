@@ -3,7 +3,7 @@ title: stashbox
 #email: spam@me
 description: > # this means to ignore newlines until "baseurl:"
   Collection of (mainly computer related) stuff.
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://michaelhaberler.github.io" # the base hostname & protocol for your site
 #twitter_username: 
 github_username:  michaelhaberler

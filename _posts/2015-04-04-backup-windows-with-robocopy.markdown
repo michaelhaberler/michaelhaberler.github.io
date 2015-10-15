@@ -2,7 +2,7 @@
 layout: post
 title:  "Backup Windows Data with Robocopy"
 date:   2015-04-04 13:22:41
-categories: windows sysadmin
+tags: windows sysadmin
 ---
 
 Today I looked for a way to create a backup of my girlfriend's Windows XP laptop home

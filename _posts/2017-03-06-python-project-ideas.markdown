@@ -13,6 +13,7 @@ see
 * <http://stackoverflow.com/questions/30939867/how-to-properly-write-cross-references-to-external-documentation-with-intersphin>
 * <http://www.sphinx-doc.org/en/stable/_modules/sphinx/ext/coverage.html#CoverageBuilder>
 * <https://github.com/micviklui/glossario>
+* <https://bitbucket.org/blais/snakefood>
 
 pyqt screenshots
 ----------------

@@ -8,7 +8,7 @@ install:
 
 env:
   global:
-  - ENCRYPTION_LABEL: "notsetyet"
+  - ENCRYPTION_LABEL: "11a378f8e3b8"
   - COMMIT_AUTHOR_EMAIL: "micviklui@gmail.com"
 
 script:

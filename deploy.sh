@@ -8,10 +8,10 @@ ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in travis.enc -out travis -d
-chmod 600 travis
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in travis_rsa.enc -out travis_rsa -d
+chmod 600 travis_rsa
 eval `ssh-agent -s`
-ssh-add travis
+ssh-add travis_rsa
 
 # The main idea is to clone the same repo (i.e. travis-dup) and copy the bld output pages
 # (under /xxks-kkk/blog/blog) to the bld directory of the same repo we just cloned (i.e. 

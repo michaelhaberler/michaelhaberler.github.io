@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>stashbox</title>
+        <link>http://micviklui.github.io/</link>
+        <description>stuff</description>
+        <language>en-us</language>
+        <pubDate>Thu, 15 Oct 2015 00:00:00 +0200</pubDate>
+        
+        <item>
+            <link>http://micviklui.github.io/2015/10/15/vim-on-windows.html</link>
+            <guid>http://micviklui.github.io/2015/10/15/vim-on-windows.html</guid>
+            <title><![CDATA[Vim on Windows]]></title>
+            <description><![CDATA[<h1>Vim on Windows</h1>
+<p>Collection of Tips/Tricks</p>
+<p><a class="reference external" href="http://vim.wikia.com/wiki/Category:Windows">http://vim.wikia.com/wiki/Category:Windows</a></p>
+<p>Vim customization</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%"/>
+<col width="45%"/>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Windows</th>
+<th class="head">Linux (or Mac OSX)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="docutils literal"><span class="pre">$USERHOME\_vimrc</span></span></td>
+<td><span class="docutils literal"><span class="pre">$HOME/.vimrc</span></span></td>
+</tr>
+<tr class="row-odd"><td><span class="docutils literal"><span class="pre">$USERHOME\vimfiles</span></span></td>
+<td><span class="docutils literal"><span class="pre">$HOME/.vim/</span></span></td>
+</tr>
+</tbody>
+</table>
+]]></description>
+             <pubDate>Thu, 15 Oct 2015 00:00:00 +0200</pubDate>
+        </item>
+    
+        <item>
+            <link>http://micviklui.github.io/2015/10/15/powershell-tips-tricks.html</link>
+            <guid>http://micviklui.github.io/2015/10/15/powershell-tips-tricks.html</guid>
+            <title><![CDATA[Powershell Tips & Tricks]]></title>
+            <description><![CDATA[<h1>Powershell Tips &amp; Tricks</h1>
+<p>List hidden files</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>ls -Force
+</pre></div>
+</div>
+<p>Search for file in directory (find)</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>ls -Path C:\Path\To\Directory -Recursive -Filter pattern
+</pre></div>
+</div>
+<p>Create symbolic link</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>cmd /c mklink C:\link\to\target C:\target\file
+</pre></div>
+</div>
+<p>Powershell community extensions <a class="reference external" href="http://pscx.codeplex.com">http://pscx.codeplex.com</a></p>
+]]></description>
+             <pubDate>Thu, 15 Oct 2015 00:00:00 +0200</pubDate>
+        </item>
+    
+        <item>
+            <link>http://micviklui.github.io/2015/05/30/running_python_on_windows.html</link>
+            <guid>http://micviklui.github.io/2015/05/30/running_python_on_windows.html</guid>
+            <title><![CDATA[Running Python on Windows]]></title>
+            <description><![CDATA[<h1>Running Python on Windows</h1>
+<div class="section" id="download-the-python-interpreter">
+<h2>Download the Python Interpreter</h2>
+<p>Download a suiting windows installer from <a class="reference external" href="https://www.python.org/downloads/windows/">python windows installer</a> and
+execute it to start the installation. Using default settings, I ended up with
+python in <span class="docutils literal"><span class="pre">C:\Python27</span></span>.</p>
+<p>The python installation structure look similar to the linux version</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%"/>
+<col width="55%"/>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Windows</th>
+<th class="head">Linux (or Mac OSX)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="docutils literal"><span class="pre">C:\Python27\python.exe</span></span></td>
+<td><span class="docutils literal"><span class="pre">/usr/bin/python</span></span></td>
+</tr>
+<tr class="row-odd"><td><span class="docutils literal"><span class="pre">C:\Python27\Scripts\pip.exe</span></span></td>
+<td><span class="docutils literal"><span class="pre">/usr/local/bin/pip</span></span></td>
+</tr>
+<tr class="row-even"><td><span class="docutils literal"><span class="pre">C:\Python27\Lib</span></span></td>
+<td><span class="docutils literal"><span class="pre">/usr/bin/lib/python2.7</span></span></td>
+</tr>
+<tr class="row-odd"><td><span class="docutils literal"><span class="pre">C:\Python27\Lib\site-packages</span></span></td>
+<td><span class="docutils literal"><span class="pre">/usr/bin/lib/python2.7/site-packages</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="installation-directory-and-path">
+<h2>Installation Directory and PATH</h2>
+<p>Make sure to add the python installation directory to the windows <span class="docutils literal"><span class="pre">PATH</span></span>
+variable (as described <a class="reference external" href="http://stackoverflow.com/questions/6318156/adding-python-path-on-windows-7">on StackOverflow</a> and <a class="reference external" href="http://www.anthonydebarros.com/2014/02/16/setting-up-python-in-windows-8-1/">in a blog post</a>).</p>
+<p>To update the <span class="docutils literal"><span class="pre">PATH</span></span> variable I had I had to log out and in first. Afterwards
+I could run a python script from any location</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>PS Z:\Developer\python<span class="p">&gt;</span> python.exe .\little.py
+hello world!
+['Z:\\Developer\\python', 'C:\\Windows\\SYSTEM32\\python27.zip', 'C:\\Python27\\DLLs', 'C:\\Python27\\lib', 'C:\\Python2
+7\\lib\\plat-win', 'C:\\Python27\\lib\\lib-tk', 'C:\\Python27', 'C:\\Python27\\lib\\site-packages']
+
+PS Z:\Developer\python<span class="p">&gt;</span> cat .\little.py
+import sys
+
+print(<span class="s2">"hello world!"</span>)
+print(sys.path)
+</pre></div>
+</div>
+</div>
+<div class="section" id="packaging-and-pip">
+<h2>Packaging and pip</h2>
+<p>For windows, pip &amp; wheel packages seem fine (see <a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Christoph Golkhe’s site</a>).
+For this, wheel packages (with C/C++) python extension modules have to be
+compiled on windows.</p>
+<p>Create wheel package</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>python.exe setup.py bdist_wheel -d TARGET
+</pre></div>
+</div>
+<p><a class="reference external" href="https://pip.pypa.io/en/latest/user_guide.html#installing-from-wheels">Install wheel package</a></p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>pip.exe install TARGET-majorV.minorV-py2.whl
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-case-mpl-qt">
+<h2>Use case <span class="docutils literal"><span class="pre">mpl_qt</span></span></h2>
+<p>Package and run <a class="reference external" href="https://github.com/micviklui/mpl_qt">mpl_qt</a> run on windows.</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>git clone https://github.com/micviklui/mpl_qt.git
+<span class="k">cd</span> mpl_qt
+python.exe setup.py bdist_wheel
+<span class="k">cd</span> dist
+pip.exe install .\mpl_qt-0.1-py2-none-any.whl
+</pre></div>
+</div>
+<p>Let’s try</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>mpl_qt
+</pre></div>
+</div>
+<p>This won’t work. First, <span class="docutils literal"><span class="pre">mpl_qt</span></span> is <a class="reference external" href="https://docs.python.org/2/faq/windows.html">not recognized as an executable</a>
+(missing <span class="docutils literal"><span class="pre">.exe</span></span> suffix perhaps?) and it isn’t associated with the python
+interpreter and second, dependencies are ignored.</p>
+<p>The dependencies can be resolved with <span class="docutils literal"><span class="pre">pip</span></span></p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/># PySide
+pip.exe install PySide
+# numpy (download appropriate file from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy)
+pip.exe install .\numpy-1.9.2+mkl-cp27-none-win_amd64.whl
+# matplotlib (download from http://www.lfd.uci.edu/~gohlke/pythonlibs/#matplotlib)
+pip.exe install .\matplotlib-1.4.3-cp27-none-win_amd64.whl
+</pre></div>
+</div>
+<p>Finally, the python script runs by stating the absolute path. The Qt-powered GUI
+of <span class="docutils literal"><span class="pre">mpl_qt</span></span> will now pop up</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/>python.exe C:\Python27\Scripts\mpl_qt
+</pre></div>
+</div>
+</div>
+]]></description>
+             <pubDate>Sat, 30 May 2015 00:00:00 +0200</pubDate>
+        </item>
+    
+        <item>
+            <link>http://micviklui.github.io/2015/04/04/backup_windows_data_with_robocopy.html</link>
+            <guid>http://micviklui.github.io/2015/04/04/backup_windows_data_with_robocopy.html</guid>
+            <title><![CDATA[Backup Windows Data with Robocopy]]></title>
+            <description><![CDATA[<h1>Backup Windows Data with Robocopy</h1>
+<p>Today I looked for a way to create a backup of my girlfriend’s Windows XP laptop
+home directory (aka <span class="docutils literal"><span class="pre">Eigene</span> <span class="pre">Dateien</span></span>). I wanted something like <cite>rsync</cite> and
+voilá: <cite>robocopy</cite> caught my attention.</p>
+<p>I downloaded it with <a class="reference external" href="https://technet.microsoft.com/en-us/magazine/2006.11.utilityspotlight.aspx">robocopy GUI</a> but I ended up writing the command into a
+<span class="docutils literal"><span class="pre">eigenedateien.cmd</span></span> file which directly calls <cite>robocopy</cite> (which is also
+available as part of the <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=17657">Windows Resource Kit Tools</a>):</p>
+<div class="highlight-winbatch"><div class="highlight"><pre><span/><span class="c1">REM /L         only list examined files</span>
+<span class="c1">REM /MIR       mirror - delete target files that are not in the source</span>
+<span class="c1">REM /V         verbose</span>
+<span class="c1">REM /NP        no progress bar</span>
+<span class="c1">REM /FFT       be tolerant on comparing time stamps</span>
+<span class="c1">REM /Z         restart if copy failed</span>
+<span class="c1">REM /W:5       retry 5 times</span>
+<span class="c1">REM /XA:H      exclude hidden files</span>
+<span class="c1">REM /LOG:file  log to file</span>
+robocopy <span class="se">^</span>
+<span class="se"> </span>   <span class="s2">"C:\Dokumente und Einstellungen\Betty\Eigene Dateien"</span> <span class="se">^</span>
+<span class="se"> </span>   <span class="s2">"\\Nas\home\Eigene Dateien"</span> <span class="se">^</span>
+<span class="se"> </span>   /MIR <span class="se">^</span>
+<span class="se"> </span>   /V <span class="se">^</span>
+<span class="se"> </span>   /NP <span class="se">^</span>
+<span class="se"> </span>   /FFT <span class="se">^</span>
+<span class="se"> </span>   /Z <span class="se">^</span>
+<span class="se"> </span>   /W:5 <span class="se">^</span>
+<span class="se"> </span>   /XA:H <span class="se">^</span>
+<span class="se"> </span>   /LOG:<span class="s2">"C:\robocopy_log.txt"</span>
+</pre></div>
+</div>
+]]></description>
+             <pubDate>Sat, 04 Apr 2015 00:00:00 +0200</pubDate>
+        </item>
+    
+    </channel>
+</rss>
